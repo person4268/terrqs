@@ -1,0 +1,4 @@
+TerrMenu/bin
+TerrMenu/obj
+dlls/
+!dlls/readme.txt

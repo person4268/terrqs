@@ -1,0 +1,1 @@
+Copy FNA.dll and Terraria.exe here.

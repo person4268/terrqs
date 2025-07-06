@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net40</TargetFramework>
+    <TargetName>Terraria.terrmenu.mm</TargetName>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>10</LangVersion>
+          
+<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+
+    
+  </PropertyGroup>
+
+  <ItemGroup>
+     <Reference Include="Terraria">
+      <HintPath>../dlls/Terraria.exe</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="FNA">
+      <HintPath>../dlls/FNA.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+   <ItemGroup>
+     <PackageReference Include="HarmonyX" Version="2.14.0" />
+   </ItemGroup>
+
+</Project>
