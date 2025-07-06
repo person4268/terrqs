@@ -2,14 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>net40</TargetFramework>
-    <TargetName>Terraria.terrmenu.mm</TargetName>
+    <TargetName>Terraria.terrQS.mm</TargetName>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <LangVersion>10</LangVersion>
-          
-<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-
-    
+    <LangVersion>10</LangVersion>        
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,9 +19,4 @@
       <Private>false</Private>
     </Reference>
   </ItemGroup>
-
-   <ItemGroup>
-     <PackageReference Include="HarmonyX" Version="2.14.0" />
-   </ItemGroup>
-
 </Project>
