@@ -18,5 +18,9 @@
       <HintPath>../dlls/FNA.dll</HintPath>
       <Private>false</Private>
     </Reference>
+    <Reference Include="FNA">
+      <HintPath>../dlls/ReLogic.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
   </ItemGroup>
 </Project>

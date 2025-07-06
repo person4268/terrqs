@@ -1,1 +1,1 @@
-Copy FNA.dll and Terraria.exe here.
+Copy FNA.dl, ReLogic.dll, and Terraria.exe here.
