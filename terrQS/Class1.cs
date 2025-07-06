@@ -12,7 +12,7 @@ namespace Terraria
     protected extern void orig_Initialize();
     protected override void Initialize()
     {
-      Console.WriteLine("LMAO");
+      Console.WriteLine("initialize was called");
       // private bool quickSplash;
       var qs = this.GetType().GetField("quickSplash", BindingFlags.Instance | BindingFlags.NonPublic);
       qs.SetValue(this, true);
@@ -42,7 +42,6 @@ namespace Terraria
           Console.WriteLine("couldnt load loader image");
         }
       }
-      Console.WriteLine("test");
 
       GraphicsDevice.Clear(Color.DarkGoldenrod);
       spriteBatch.Begin();
@@ -61,28 +60,21 @@ namespace Terraria
         return;
       }
 
-      Console.WriteLine("test1");
       GetType().GetMethod("TickLoadProcess", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(this, null);
-      Console.WriteLine("test1.1");
 
       int pendingAssets = Assets.PendingAssets;
       bool musicLoaded = (bool)GetType().GetField("_musicLoaded", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(this);
-      // Console.WriteLine("test1.1");
       bool artLoaded = (bool)GetType().GetField("_artLoaded", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(this);
-      // Console.WriteLine("test1.2");
       bool loadedEverything = Program.LoadedEverything;
       bool done = pendingAssets == 0 && musicLoaded && artLoaded && loadedEverything;
       Console.WriteLine("Pending assets: " + pendingAssets + ", musicLoaded: " + musicLoaded + ", artLoaded:" + artLoaded + ", loadedEverything: " + loadedEverything);
+
       if (!init1Ran && loadedEverything)
       {
-        Console.WriteLine("test2");
         GetType().GetMethod("Initialize_AlmostEverything", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(this, null);
-        Console.WriteLine("test2.1");
         init1Ran = true;
       }
       if (!done) return;
-
-      Console.WriteLine("test3");
 
       if (!init2Ran)
       {
